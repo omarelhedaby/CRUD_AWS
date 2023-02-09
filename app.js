@@ -5,6 +5,12 @@ const blogRoutes = require('./routes/blogRoutes')
 // express app
 const app = express();
 
+const server = app.listen(3000, () => {
+  const host = server.address().address;
+  const port = server.address().port;
+  console.log(`Example app listening at http://${host}:${port}`);
+});
+
 // connect to mongodb & listen for requests
 const dbURI = "mongodb+srv://omaressam33:Omar%40essam33@cluster0.lj9fz.mongodb.net/?retryWrites=true&w=majority";
 
